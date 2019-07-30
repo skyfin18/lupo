@@ -1,0 +1,12 @@
+#bewUnt ul, #bewUnt h3 {
+    padding-inline-start: 0px;
+}
+
+.argumente {
+    list-style: none;
+}
+
+.img-fluid97 {
+    max-width: 97%;
+    height:auto
+}

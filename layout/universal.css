@@ -1,0 +1,161 @@
+
+body {
+    margin: 0;
+    font-family: Calibri;
+}
+
+p {
+    font-family: Calibri;
+    font-weight: 400;
+}
+
+span {
+    font-family: Calibri;
+}
+
+a {
+    font-family: Calibri;
+}
+
+@media (max-width: 324px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 325px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+h2 {
+    font-size: 1.47rem;
+}
+
+section {
+
+}
+
+
+/*
+.sticky {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+}
+ */
+
+
+/* ul */
+.list-style-none {
+    list-style: none;
+}
+
+/* color */
+.black {
+    color: black;
+}
+
+.white {
+    color: white;
+}
+
+.darkorange {
+    color: darkorange;
+}
+
+.color777 {
+    color: #777;
+}
+
+/* bg color */
+.bg-darkorange {
+    background-color: darkorange;
+}
+
+.bgHellGrey {
+    background-color: #e3e3e3;
+}
+
+.bg_florawhite {
+    background-color: floralwhite;
+}
+
+.bg-transperent-black-06 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+
+}
+
+/* hover color */
+.hover-white:hover {
+    color: white;
+}
+
+.hover-darkorange:hover {
+    color: darkorange;
+}
+
+/* border */
+.borderOrange {
+    border-width: 1px;
+    border-style: solid;
+    border-color: orange;
+}
+
+.bo50px {
+    border-radius: 50px;
+}
+
+/* overflow */
+.responsiveX {
+    overflow-x: hidden;
+}
+
+.header_button {
+    background: transparent;
+    border: none !important;
+}
+
+/* headline */
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 15px 0 20px;
+    border-bottom: 1px solid #ff8c00
+}
+
+/* btn */
+.btn-warning {
+    background-color: orange;
+    border-radius: 5px;
+}
+
+.btn-warning a {
+    text-decoration: none;
+}
+
+/* font size */
+.rem2 {
+    font-size: 2rem;
+}
+
+.fontS14px {
+    font-size: 14px;
+}
+
+.fontS20px {
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .f900rem18 {
+        font-size: 1.8rem;
+    }
+}
+
+/* bootstrap */
+
+
+​

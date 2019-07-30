@@ -1,0 +1,294 @@
+/* Headline */
+
+.center {
+    text-align: center;
+}
+
+.headline {
+    margin-top: 2.2em;
+}
+
+/* picture */
+
+#picmuc {
+    width: 100%;
+    height: auto;
+}
+
+.picjobs {
+    width: 22em;
+    float: right;
+}
+
+#picjobs1 {
+    margin-bottom: 1em;
+    margin-left: 2em;
+}
+
+@media (max-width: 1199px) {
+
+    #picjobs1 {
+        width: 18em;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    #picjobs1 {
+        width: 15em;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #picjobs1 {
+        width: 8em;
+    }
+}
+
+.picjobs1 {
+    width: 100%;
+    height: auto;
+}
+
+/* div bewerbungsportal */
+
+.borderorange {
+    border: solid 1px;
+    border-color: orange;
+
+}
+
+#jobs_bewerbungsportal {
+    padding-top: 0.8em;
+}
+
+@media (max-width: 1199px) {
+
+    #jobs_p {
+        padding-bottom: 2.1em;
+    }
+}
+
+/* div class container bgGrey */
+
+@media (max-width: 1199px) {
+
+    #jobs_div_etwas_spannendes_dabei {
+        padding-bottom: 1.4em;
+    }
+}
+
+.bg_grey {
+    background-color: rgba(131,131,131,0.36);
+}
+
+.border_orange {
+    border: solid 1px;
+    border-color: orange;
+}
+
+.border_orange_2 {
+    border: solid 3px;
+    border-color: orange;
+}
+
+#jobs_input {
+    width: 98.5%;
+    height: auto;
+}
+
+.jobs_button {
+    width: 48%;
+    height: auto;
+}
+
+#jobs_button1 {
+    margin-top: 1.3em;
+}
+
+#jobs_button2 {
+    margin-left: 2%;
+}
+
+#jobs_button_a {
+    color: black;
+}
+
+
+#jobs_bewerbungsportal_border {
+    height: 382px;
+}
+
+@media (max-width: 1199px) {
+    #jobs_bewerbungsportal_border {
+        height: 501px;
+    }
+}
+
+@media (max-width: 355px) {
+    #jobs_bewerbungsportal_border {
+        height: 510px;
+    }
+}
+
+.jobauswahl {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+
+/* Background gray */
+
+.bgGray {
+    background-color: rgba(131,131,131,0.36);
+}
+
+/* muss ganz nach unten: Schneidet seitenrand ab */
+
+.overshit {
+    overflow-x: hidden;
+}
+
+/* Traumjob noch heute mit Hilfe unserer Lupo-Jobbörse. */
+
+/* Handy */
+
+@media (max-width: 450px) {
+    #imgJobboerseHandy {
+        width: 100%;
+        padding-bottom: 1em;
+    }
+}
+
+@media (min-width: 451px) {
+    #imgJobboerseHandy {
+        display: none;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 450px) {
+    #imgJobboerseTablet {
+        display: none;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+    #imgJobboerseTablet {
+        width: 15em;
+        float: right;
+        padding-bottom: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgJobboerseTablet {
+        display: none;
+    }
+}
+
+/* Destop */
+
+@media (max-width: 767px) {
+    #imgJobboerseDestop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgJobboerseDestop {
+        width: 23em;
+        float: right;
+        padding-left: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+@media (min-width: 992px) {
+    #imgJobboerseDestop {
+        width: 24em;
+        margin-right: 1em;
+    }
+}
+
+
+/* Viel Spaß beim Stöbern und vor allem viel Erfolg wünscht Ihnen Ihre Personal Agentur Lupo GmbH. */
+
+/* Handy */
+
+@media (max-width: 450px) {
+    #imgJobboerseHandy2 {
+        width: 100%;
+        padding-bottom: 1em;
+    }
+}
+
+@media (min-width: 451px) {
+    #imgJobboerseHandy2 {
+        display: none;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 450px) {
+    #imgJobboerseTablet2 {
+        display: none;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+    #imgJobboerseTablet2 {
+        width: 15em;
+        float: left;
+        padding-right: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgJobboerseTablet2 {
+        display: none;
+    }
+}
+
+/* Destop */
+
+@media (max-width: 767px) {
+    #imgJobboerseDestop2 {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgJobboerseDestop2 {
+        width: 23em;
+        float: left;
+        padding-left: 1em;
+        padding-bottom: 1em;
+        margin-right: 1em;
+    }
+}
+
+@media (min-width: 992px) {
+    #imgJobboerseDestop2 {
+        width: 24em;
+        margin-right: 1em;
+    }
+}
+
+@media (max-width: 370px) {
+    .stellenbeschreibungEinrückung {
+        width: 130%;
+        margin-left: -15%;
+    }
+}
+
+#iniBtn {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+

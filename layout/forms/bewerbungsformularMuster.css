@@ -1,0 +1,94 @@
+
+#headerhome {
+    margin-left: 15px;
+}
+
+.ml-1em_min360 {
+    margin-left: 15px;
+}
+
+/* formular */
+
+
+.form-group {
+    margin-left: 10%;
+}
+
+.form-control {
+    width: 80%;
+}
+
+#myDropzone {
+    height: 200px;
+}
+
+#checkbox {
+    margin-left: 10%;
+}
+
+.submit {
+    margin-left: 10%;
+}
+
+.imglogo {
+    border-radius: 50px;
+    width: 288px;
+    height: auto;
+}
+
+@media (min-width: 400px) {
+    .imglogo {
+        width: 80%;
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 600px) {
+    .imglogo {
+        width: 70%;
+    }
+}
+
+@media (min-width: 800px) {
+    .imglogo {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .imglogo {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .imglogo {
+        width: 40%;
+    }
+}
+
+#borderForm {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+
+#div-weiter {
+
+}
+
+#a-weiter {
+    width: 100px;
+    border-width: 2px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: #70747F;
+    background-color: #c2cbd7;
+    color: black;
+}
+
+#a-weiter:hover {
+    opacity: 0.8;
+    color: #ff8c00;
+}
+

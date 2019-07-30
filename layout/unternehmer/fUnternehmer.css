@@ -1,0 +1,249 @@
+.ml-1em_min360 {
+    margin-left: 15px;
+}
+
+#headerhome {
+    margin-left: 15px;
+}
+
+
+@media (max-width: 995px) {
+
+    .reSmall {
+        font-size: 1.6em;
+    }
+}
+
+
+
+@media (min-width: 1000px) {
+
+    #button_unternehmer2 {
+        display: none;
+    }
+}
+
+@media (max-width: 999px) {
+
+    #button_unternehmer1 {
+        display: none;
+    }
+}
+
+
+/* Speziell für Ihr Unternehmen ausgewähltes Fachpersonal. */
+
+/* Handy */
+
+@media (max-width: 450px) {
+    #imgUnternehmerHandy {
+        width: 100%;
+        padding-bottom: 1em;
+    }
+}
+
+@media (min-width: 451px) {
+    #imgUnternehmerHandy {
+        display: none;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 450px) {
+    #imgUnternehmerTablet {
+        display: none;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+    #imgUnternehmerTablet {
+        width: 15em;
+        float: right;
+        padding-top: 0.5em;
+        margin-right: 0.5em;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgUnternehmerTablet {
+        display: none;
+    }
+}
+
+/* Destop */
+
+@media (max-width: 767px) {
+    #imgUnternehmerDestop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgUnternehmerDestop {
+        width: 23em;
+        float: right;
+        padding-left: 1em;
+
+    }
+}
+
+@media (min-width: 992px) {
+    #imgUnternehmerDestop {
+        width: 24em;
+        margin-left: 1em;
+    }
+}
+
+/* Umsatzsteigerungen durch Fokussierung und Entlastung. */
+
+/* Handy */
+
+@media (max-width: 450px) {
+    #imgUnternehmerHandy2 {
+        width: 100%;
+        padding-bottom: 1em;
+    }
+}
+
+@media (min-width: 451px) {
+    #imgUnternehmerHandy2 {
+        display: none;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 450px) {
+    #imgUnternehmerTablet2 {
+        display: none;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+    #imgUnternehmerTablet2 {
+        width: 15em;
+        float: left;
+        padding-top: 0.5em;
+        margin-right: 0.5em;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgUnternehmerTablet2 {
+        display: none;
+    }
+}
+
+/* Destop */
+
+@media (max-width: 767px) {
+    #imgUnternehmerDestop2 {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgUnternehmerDestop2 {
+        width: 23em;
+        float: left;
+        padding-right: 1em;
+
+    }
+}
+
+@media (min-width: 992px) {
+    #imgUnternehmerDestop2 {
+        width: 24em;
+        margin-right: 1em;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #imgUnternehmerDestop2 {
+        padding-bottom: 3em;
+    }
+}
+
+/* Tschüss Personalengpässe. Hallo Lupo-Partnerschaft. */
+
+/* Handy */
+
+@media (max-width: 450px) {
+    #imgUnternehmerHandy3 {
+        width: 100%;
+        padding-bottom: 1em;
+    }
+
+    #imgUnternehmerTablet3 {
+        display: none;
+    }
+
+    #imgUnternehmerDestop3 {
+        display: none;
+    }
+}
+
+@media (min-width: 451px) {
+    #imgUnternehmerHandy3 {
+        display: none;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 450px) {
+    #imgUnternehmerTablet3 {
+        display: none;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+    #imgUnternehmerTablet3 {
+        width: 15em;
+        float: right;
+        padding-top: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    #imgUnternehmerHandy3 {
+        display: none;
+    }
+
+    #imgUnternehmerDestop3 {
+        display: none;
+    }
+}
+
+
+
+/* Destop */
+
+@media (min-width: 768px) {
+    #imgUnternehmerTablet3 {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #imgUnternehmerDestop2 {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgUnternehmerDestop3 {
+        width: 23em;
+        float: right;
+        padding-left: 1em;
+
+    }
+}
+
+@media (min-width: 992px) {
+    #imgUnternehmerDestop3 {
+        width: 24em;
+        margin-left: 1em;
+    }
+}
+

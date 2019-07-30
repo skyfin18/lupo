@@ -1,0 +1,20 @@
+
+section ul {
+    list-style: none;
+}
+
+@media print {
+    header {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+}
+#border_flyer{
+    border-radius: 50px;
+}
+.ulpadding0{
+    padding: 0px;
+}

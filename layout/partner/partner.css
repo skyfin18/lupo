@@ -1,0 +1,160 @@
+/* picture */
+
+#headerhome {
+    margin-left: 15px;
+}
+
+#picmuc {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 799px) {
+
+
+/* AXEL FEHLER PARTNER
+    .headline {
+        margin-top: 2.3em;
+        font-size: 2.3em;
+
+ */
+    }
+
+    #picmuc {
+        margin-top: -0.3em;
+    }
+
+
+@media (min-width: 800px) {
+
+    .headlineup {
+        margin-top: -0.4em;
+        font-size: 2.1em;
+    }
+
+    #picmuc {
+        margin-top: -0.3em;
+    }
+}
+
+.ml-1em_min360 {
+    margin-left: 15px;
+}
+
+/* img 1 */
+
+/* Bilder Unsere Leistungen */
+
+/* Handy */
+
+@media (max-width: 450px) {
+    #imgPartnerHandy {
+        width: 100%;
+        padding-bottom: 1em;
+    }
+}
+
+@media (min-width: 451px) {
+    #imgPartnerHandy {
+        display: none;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 450px) {
+    #imgPartnerTablet {
+        display: none;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+    #imgPartnerTablet {
+        width: 15em;
+        float: right;
+        padding-bottom: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgPartnerTablet {
+        display: none;
+    }
+}
+
+/* Destop */
+
+@media (max-width: 767px) {
+    #imgPartnerDestop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgPartnerDestop {
+        width: 23em;
+        float: right;
+        padding-left: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+.igzBAapBfb {
+    margin-top: 44px;
+}
+
+/* cards */
+
+.cards {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 575px) {
+    .fssm24px {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .fsmd16px {
+        font-size: 16px;
+    }
+
+    .h174px {
+        height: 174px;
+    }
+
+    .mt-34px {
+        margin-top: 34px;
+    }
+}
+
+@media (min-width: 769px) {
+    #bfa-mb {
+        margin-bottom: 26px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

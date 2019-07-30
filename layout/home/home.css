@@ -1,0 +1,183 @@
+
+/* slide show */
+#carouselExampleIndicators {
+}
+
+.carousel-indicators {
+
+    margin: 0 0 15px 0;
+}
+
+.carousel-indicators li {
+    background-color: darkorange;
+    width: 30px;
+    height: 3px;
+    margin-top: 4px;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 5px;
+}
+
+.carousel-indicators .active {
+    background-color: rgba(0, 0, 0, 0.5);;
+    width: 30px;
+    height: 4px;
+    border-radius: 1px;
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+#myButtonTrans1 {
+    height: 2.2em;
+    width: 10em;
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.3);
+
+    color: darkorange;
+}
+
+#myButtonTrans1:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: black;
+}
+
+@media (max-width: 425px) {
+    /* .display_none_max600 */
+
+    #myButtonTrans1 {
+        height: 2.2em;
+        width: 10em;
+        border-radius: 10px;
+        background-color: rgba(55, 55, 55, 0.3);
+
+        color: darkorange;
+    }
+
+    #myButtonTrans1:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+
+        color: darkorange;
+    }
+}
+
+#myButtonTrans2 {
+    height: 2.2em;
+    width: 10em;
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.3);
+
+    color: darkorange;
+}
+
+#myButtonTrans2:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: darkorange;
+}
+
+#myButtonTrans3 {
+    height: 2.2em;
+    width: 10em;
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.3);
+
+    color: darkorange;
+}
+
+#myButtonTrans3:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: darkorange;
+}
+
+#myButtonTrans4 {
+    height: 2.2em;
+    width: 10em;
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.3);
+
+    color: darkorange;
+}
+
+#myButtonTrans4:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: darkorange;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("../../bilder/home/arrowLeft.png");
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-control-next-icon {
+    background-image: url("../../bilder/home/arrowRight.png");
+    color: #ff8c00;
+    width: 30px;
+    height: 30px
+}
+
+/* AXEL */
+@media (max-width: 425px) {
+    /* .display_none_max600 */
+
+    #myButtonTrans1 {
+        height: 2.2em;
+        width: 10em;
+        border-radius: 10px;
+        background-color: rgba(55, 55, 55, 0.3);
+
+        color: darkorange;
+    }
+
+    #myButtonTrans1:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+
+        color: darkorange;
+    }
+}
+
+@media (min-width: 600px) {
+    .display_none_min600 {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .display_none_min800 {
+        display: none;
+    }
+}
+
+@media (min-width: 1085px) {
+    .display_none_min1085 {
+        display: none;
+    }
+}
+
+.carousel-feld {
+    margin-bottom: -28px;
+}
+
+@media (min-width: 1024px) {
+    .carousel-feld {
+        margin-bottom: -5px;
+    }
+}
+
+@media (min-width: 1224px) {
+    .carousel-feld {
+        margin-bottom: 20px;
+    }
+}
+
+
+.caroma {
+    width: 110%;
+    margin-left: -5%;
+    height: 145px;
+}

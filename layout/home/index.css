@@ -1,0 +1,341 @@
+h1 {
+    margin-bottom: 2px;
+}
+
+/* section fBewerber */
+
+section.index {
+    font-size: 1.2em;
+}
+
+.override {
+    margin: 0 !important;
+}
+
+.slides {
+    display: none;
+    width: 100%;
+}
+
+.animate-left {
+    position: relative;
+    animation: animateleft 0.8s;
+}
+
+@keyframes animateleft {
+    from {
+        left: -500px;
+        opacity: 0
+    }
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+/* für bewerber und unternehmer */
+
+@media (min-width: 992px) {
+    .none_min992 {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .none_max991 {
+        display: none;
+    }
+}
+
+.picbewerbung {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+/* button */
+
+.divbutton {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+/* silbentrennung */
+
+p {
+    hyphens: auto;
+}
+/* error
+#none1 {
+    display: none;
+}
+*/
+@media (min-width: 800px) {
+
+    #none123 {
+
+    }
+
+    #none234 {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+
+    #none234 {
+    }
+
+    #none123 {
+        display: none;
+
+    }
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: black;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/* slide show */
+
+.carousel-indicators li {
+
+    margin: 3px 0px -30px 0px;
+    background-color: darkorange;
+    width: 30px;
+    height: 6px;
+    border-radius: 5px;
+}
+
+.carousel-indicators .active {
+    background-color: rgba(0, 0, 0, 0.5);;
+    width: 30px;
+    height: 6px;
+    border-radius: 1px;
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+
+
+.carousel-control-prev-icon {
+    background-image: url("../../bilder/home/arrowLeft.png");
+    width: 30px;
+    height: 30px
+;
+}
+
+.carousel-control-next-icon {
+    background-image: url("../../bilder/home/arrowRight.png");
+    color: #ff8c00;
+    width: 30px;
+    height: 30px
+
+}
+
+
+
+.bg-transperent-black-06 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+
+}
+
+#myButtonTrans1 {
+    height: 2.2em;
+    width: 10em;
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.3);
+
+    color: darkorange;
+}
+
+#myButtonTrans1:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: darkorange;
+}
+
+#myButtonTrans2 {
+    height: 2.2em;
+    width: 10em;
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.3);
+
+    color: darkorange;
+}
+
+#myButtonTrans2:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: darkorange;
+}
+
+
+#myButtonTrans3 {
+    height: 2.2em;
+    width: 10em;
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.3);
+
+    color: darkorange;
+}
+
+#myButtonTrans3:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: darkorange;
+}
+
+#myButtonTrans4 {
+    height: 2.2em;
+    width: 10em;
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.3);
+
+    color: darkorange;
+}
+
+#myButtonTrans4:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: darkorange;
+}
+
+/* Für Bewerber und Unternehmer */
+
+.picLeistungen {
+    width: 100%;
+    height: auto;
+}
+
+#picleistungenimg {
+    width: 18em;
+    height: auto;
+    float: right;
+    margin-right: 3em;
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+@media (max-width: 600px) {
+
+    #picleistungenimg {
+        width: 12em;
+        height: auto;
+        float: right;
+        margin-right: 1em;
+        margin-left: 1em;
+        margin-top: 1em;
+        margin-bottom: -0.5em;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #picleistungenimg {
+        width: 90%;
+        height: auto;
+        padding-left: 1em;
+        margin-left: 5em;
+        margin-right: 1.5em;
+        padding-bottom: 1em;
+    }
+}
+
+.leistungen_button_a {
+    color: white;
+}
+
+.leistungen_button_a:hover {
+    color: white;
+}
+/* AXEL */
+@media (max-width: 425px) {
+    /* .display_none_max600 */
+
+    #myButtonTrans1 {
+        height: 2.2em;
+        width: 10em;
+        border-radius: 10px;
+        background-color: rgba(55, 55, 55, 0.3);
+
+        color: darkorange;
+    }
+
+    #myButtonTrans1:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+
+        color: darkorange;
+    }
+}
+
+@media (min-width: 600px) {
+    .display_none_min600 {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .display_none_min800 {
+        display: none;
+    }
+}
+
+@media (min-width: 1085px) {
+    .display_none_min1085 {
+        display: none;
+    }
+}
+
+.carousel-feld {
+    margin-bottom: -28px;
+}
+
+@media (min-width: 1024px) {
+    .carousel-feld {
+        margin-bottom: -5px;
+    }
+}
+
+@media (min-width: 1224px) {
+    .carousel-feld {
+        margin-bottom: 20px;
+    }
+}
+
+/* cards */
+
+.cards {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.color777 {
+    color: #777;
+}
+

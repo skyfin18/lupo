@@ -1,0 +1,64 @@
+/* header */
+/*toggle */
+.navbar-light .navbar-toggler {
+    border-color: #333;
+}
+
+#content {
+    top: 0; /* Stay on top */
+    transition: top 0.6s; /* Transition effect when sliding down (and up) */
+}
+
+#navbar {
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.6s; /* Transition effect when sliding down (and up) */
+    z-index: 9999;
+}
+
+/* positionierung */
+
+@media (max-width: 767px) {
+    #navRevers {
+        margin: 5px 0px 0px 0px;
+        padding: 0px 0px 0px 50px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    #navFix {
+        margin: -35px 0px 0px 110px;
+    }
+
+    #imgLogo {
+        margin: 0px 0px 0px -32px;
+    }
+
+}
+
+@media (min-width: 970px) {
+    #navFix {
+        margin-left: 133px;
+    }
+}
+
+@media (min-width: 1290px) {
+    #navFix {
+        margin-left: 242px;
+    }
+}
+
+/* headerHeadline */
+#imgMuc {
+    width: 100%;
+    height: auto;
+}
+
+#button_home {
+    border: none;
+    outline: none;
+}
+
+

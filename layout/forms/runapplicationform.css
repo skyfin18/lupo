@@ -1,0 +1,14 @@
+#picmail {
+    width: 50%;
+    height: auto;
+    display: block;
+    text-align: center;
+    margin-left: 25%;
+}
+
+.runapplicationform_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

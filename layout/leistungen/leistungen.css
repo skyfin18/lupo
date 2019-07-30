@@ -1,0 +1,108 @@
+/* Headline */
+
+.center {
+    text-align: center;
+}
+
+/* picture */
+
+#picmuc {
+    width: 100%;
+    height: auto;
+}
+
+#logoLeistungen {
+    width: 10em;
+    height: auto;
+    float: right;
+}
+
+#logoLeistungen1 {
+    width: 40%;
+    height: auto;
+}
+
+/* Bilder Unsere Leistungen */
+
+/* Handy */
+
+@media (max-width: 450px) {
+    #imgLeistungenHandy {
+        width: 100%;
+        padding-bottom: 1em;
+    }
+}
+
+@media (min-width: 451px) {
+    #imgLeistungenHandy {
+        display: none;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 450px) {
+    #imgLeistungenTablet {
+        display: none;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+    #imgLeistungenTablet {
+        width: 15em;
+        float: right;
+        padding-bottom: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgLeistungenTablet {
+        display: none;
+    }
+}
+
+/* Destop */
+
+@media (max-width: 767px) {
+    #imgLeistungenDestop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #imgLeistungenDestop {
+        width: 23em;
+        float: right;
+        padding-left: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+@media (min-width: 992px) {
+    #imgLeistungenDestop {
+       width: 24em;
+        margin-right: 1em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

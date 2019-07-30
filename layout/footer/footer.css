@@ -1,0 +1,170 @@
+footer {
+    background-color: #15191f;
+    overflow-x: hidden;
+}
+
+footer h2 {
+    color: #c2cbd7;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+footer ul {
+    list-style: none;
+    color: #c2cbd7;
+    margin-left: -30px;
+
+}
+
+footer #footer_div_4 img {
+    width: 25px;
+}
+
+
+
+footer a {
+    color: #c2cbd7;
+}
+
+footer a img {
+    margin-left: -15px;
+}
+
+footer a:hover {
+    color: orange;
+}
+
+footer b {
+    color: #c2cbd7;
+}
+
+footer p {
+    color: #c2cbd7;
+}
+
+/*div 1 */
+
+@media (min-width: 400px) and (max-width: 991px){
+    #footer_div_1_div {
+        float: left;
+    }
+}
+
+@media (min-width: 1079px) {
+    #footer_div_1_div {
+        float: left;
+    }
+}
+
+/*div 2 */
+
+#footer_flex_ul {
+    margin-left: -35px;
+}
+
+@media (min-width: 768px)  {
+    #uebersichtmedia {
+        margin-top: 45px;
+    }
+}
+
+/*div 3 */
+
+.footer_span {
+    border-radius: 15px;
+    width: 48%;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 1%;
+    margin-bottom: 5px;
+    float: left;
+
+}
+
+.footer_span:hover {
+    opacity: 0.9;
+}
+
+.footer_span:hover a {
+    opacity: 1;
+}
+
+/* div 4 */
+
+#footer_div_4 ul li {
+    display: inline;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.copyright {
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+/* footer link */
+.footer_link {
+    border: none;
+    background-color: darkorange;
+    font-weight: bolder;
+}
+
+.footer_link:hover,
+.footer_link:active,
+.footer_link:focus {
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.footer_button {
+    border: none;
+    background-color: #15191f;
+    color: #c2cbd7;
+    font-weight: bolder;
+}
+
+.footer_button:hover,
+.footer_button:active,
+.footer_button:focus {
+    color: darkorange;
+    border: none;
+    outline: none;
+}
+
+.button_forms {
+    border: none;
+    outline: none;
+    background-color: #15191f;
+    color: #c2cbd7;>
+}
+
+.button_forms:hover,
+.button_forms:active,
+.button_forms:focus {
+    color: darkorange;
+    border: none;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
