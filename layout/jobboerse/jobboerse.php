@@ -19,7 +19,6 @@ $jobboerseT3 = NULL;
 $jobboerseT4 = NULL;
 $jobboerseT5 = NULL;
 
-include "./../../inc/db.inc.php";
 include "./views/db-output.views.php";
 
 ?>
@@ -160,9 +159,9 @@ include "./views/db-output.views.php";
                                 of the card's content.</p>
 
                             <div class="text-center">
-                                <a class="btn btn-warning white" href="<?php ?>">
+                                <button class="btn btn-warning white" onclick="onStellenangebote()">
                                     Stellenangebot
-                                </a>
+                                </button>
                             </div>
 
 
@@ -182,9 +181,9 @@ include "./views/db-output.views.php";
                                 of the card's content.</p>
 
                             <div class="text-center">
-                                <a class="btn btn-warning white" href="<?php ?>">
+                                <button class="btn btn-warning white" onclick="onStellenangebote()">
                                     Stellenangebot
-                                </a>
+                                </button>
                             </div>
 
                         </div>
@@ -204,9 +203,9 @@ include "./views/db-output.views.php";
                             <div class="text-center">
 
                                 <div class="text-center">
-                                    <a class="btn btn-warning white" href="<?php ?>">
+                                    <button class="btn btn-warning white" onclick="onStellenangebote()">
                                         Stellenangebot
-                                    </a>
+                                    </button>
                                 </div>
 
                             </div>
@@ -226,9 +225,9 @@ include "./views/db-output.views.php";
                                 of the card's content.</p>
 
                             <div class="text-center">
-                                <a class="btn btn-warning white" href="<?php ?>">
+                                <button class="btn btn-warning white" onclick="onStellenangebote()">
                                     Stellenangebot
-                                </a>
+                                </button>
                             </div>
 
                         </div>
@@ -247,9 +246,9 @@ include "./views/db-output.views.php";
                                 of the card's content.</p>
 
                             <div class="text-center">
-                                <a class="btn btn-warning white" href="<?php ?>">
+                                <button class="btn btn-warning white" onclick="onStellenangebote()">
                                     Stellenangebot
-                                </a>
+                                </button>
                             </div>
 
                         </div>
@@ -268,9 +267,9 @@ include "./views/db-output.views.php";
                                 of the card's content.</p>
 
                             <div class="text-center">
-                                <a class="btn btn-warning white" href="<?php ?>">
+                                <button class="btn btn-warning white" onclick="onStellenangebote()">
                                     Stellenangebot
-                                </a>
+                                </button>
                             </div>
 
                         </div>
@@ -286,9 +285,10 @@ include "./views/db-output.views.php";
             <div class="row">
                 <div class="col-md-12">
                     <br>
-                    <div class="container bg_florawhite">
+                    <div class="container bg_florawhite bo50px">
                         <div class="row">
-                            <div id="jobs_div_etwas_spannendes_dabei" class="col-xs-12 col-sm-12 col-md-6 border_orange">
+                            <div id="jobs_div_etwas_spannendes_dabei"
+                                 class="col-xs-12 col-sm-12 col-md-6 border_orange">
 
                                 <!-- Headline 3 -->
                                 <?php
@@ -323,16 +323,17 @@ include "./views/db-output.views.php";
 
                                 <p>
 
-                                    Wenn Sie mehr über uns und unsere Leistungen erfahren möchten, schreiben Sie uns eine
+                                    Wenn Sie mehr über uns und unsere Leistungen erfahren möchten, schreiben Sie uns
+                                    eine
                                     Mail an
 
                                     <a class="black hover-darkorange" href="<?php ?>">
-                                        <b><?php echo "info@personal-agentur-lupo.de" ;?></b>
+                                        <b><?php echo "info@personal-agentur-lupo.de"; ?></b>
                                     </a>
 
                                     oder rufen Sie uns unter der
 
-                                    <a class="black hover-darkorange" href="<?php; ?>">
+                                    <a class="black hover-darkorange" href="<?php ; ?>">
                                         <b><?php echo "+4917672426019"; ?></b>
                                     </a>
 
@@ -427,7 +428,12 @@ include "./views/db-output.views.php";
         </div>
     </section>
 
-    <?php include "./layout/bewUnt/bewUnt.php"?>
-
     <br>
+
+    <?php include "./layout/bewUnt/bewUnt.php";
+    echo "<br>";
+    include "layout/slogan/slogan.php";
+    ?>
+
+
 </div>

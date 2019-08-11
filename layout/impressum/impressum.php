@@ -21,7 +21,6 @@ $impressumT4 = null;
 $impressumT5 = null;
 $impressumT6 = null;
 
-include "./../../inc/db.inc.php";
 include "./views/db-output.views.php";
 
 ?>

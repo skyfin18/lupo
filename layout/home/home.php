@@ -9,8 +9,6 @@ if ($istBenutzerAngemeldet) {
     $benututzername = '';
 }
 
-require "./inc/db.inc.php";
-require "./views/db-output.views.php";
 ?>
 
 <div class="responsiveX">
@@ -48,11 +46,13 @@ require "./views/db-output.views.php";
 
                         </p>
 
-                        <a id="bottem1" class="darkorange hover-white" href="">
-                            <button id="myButtonTrans1">
-                                über Lupo
-                            </button>
-                        </a>
+
+                        <button onclick="onUeberLupo()"
+                                class="darkorange hover-darkorange"
+                                id="myButtonTrans1">
+                            Über Lupo
+
+                        </button>
 
                         <br>
                         <br>
@@ -78,11 +78,10 @@ require "./views/db-output.views.php";
 
                         </p>
 
-                        <a id="bottem1" class="darkorange hover-white" href="">
-                            <button id="myButtonTrans2">
-                                Bewerber
-                            </button>
-                        </a>
+                        <button onclick="onBewerber()"
+                                class="darkorange hover-white" id="myButtonTrans2">
+                            Bewerber
+                        </button>
 
                         <br>
                         <br>
@@ -105,11 +104,12 @@ require "./views/db-output.views.php";
 
                         </p>
 
-                        <a id="bottem1" class="darkorange hover-white" href="">
-                            <button id="myButtonTrans3">
+                            <button onclick="onUnternehmer()"
+                                    id="myButtonTrans3"
+                                    class="darkorange hover-white">
                                 Unternehmer
                             </button>
-                        </a>
+
 
                     </div>
                 </div>
@@ -119,11 +119,13 @@ require "./views/db-output.views.php";
                 <img class="d-block w-100" src="./bilder/home/slide4.jpg" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="bg-transperent-black-06 carousel-feld caroma">
+
                         <h2 class="darkorange f900rem18">
                             <b>
                                 Machen sie Karriere
                             </b>
                         </h2>
+
                         <p class="fontS14px">
                             Suche Sie nach einer attraktive und anspruchsvolle Tätigkeiten um zu zeigen was Sie
                             können.
@@ -132,11 +134,11 @@ require "./views/db-output.views.php";
 
                         </p>
 
-                        <a id="bottem1" class="darkorange hover-white" href="">
-                            <button id="myButtonTrans4">
-                                Jobbörse
-                            </button>
-                        </a>
+                        <button onclick="onJobboerse()"
+                                class="darkorange hover-white"
+                                id="myButtonTrans4">
+                            Jobbörse
+                        </button>
 
                         <br>
                         <br>
@@ -194,7 +196,8 @@ require "./views/db-output.views.php";
 
                 } ?>
 
-                <p><?php echo "$homeT1"; ?></p>
+                <p class="bg-white"><?php echo "$homeT1 <button onclick='onLeistungen()'
+                                               style='border: none; outline: none; background-color: white'><b class='hover-darkorange '>Leistungen</b></button>"; ?></p>
 
 
             </div>
@@ -233,9 +236,8 @@ require "./views/db-output.views.php";
                                 of the card's content.</p>
 
                             <div class="text-center">
-                                <a class="btn btn-warning white" href="<?php ?>">
-                                    Stellenangebote
-                                </a>
+                                <button class="btn btn-warning white" onclick="onStellenangebote()"> Stellenangebote
+                                </button>
                             </div>
 
 
@@ -257,9 +259,8 @@ require "./views/db-output.views.php";
                                 of the card's content.</p>
 
                             <div class="text-center">
-                                <a class="btn btn-warning white" href="">
-                                    Stellenangebote
-                                </a>
+                                <button class="btn btn-warning white" onclick="onStellenangebote()"> Stellenangebot
+                                </button>
                             </div>
 
                         </div>
@@ -281,9 +282,8 @@ require "./views/db-output.views.php";
                             <div class="text-center">
 
                                 <div class="text-center">
-                                    <a class="btn btn-warning white" href="<?php ?>">
-                                        Stellenangebote
-                                    </a>
+                                    <button class="btn btn-warning white" onclick="onStellenangebote()"> Stellenangebot
+                                    </button>
                                 </div>
 
                             </div>

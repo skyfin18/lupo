@@ -20,8 +20,7 @@ $faqsT3 = null;
 $faqsT4 = null;
 $faqsT5 = null;
 
-include "./../../inc/db.inc.php";
-include "./views/db-output.views.php";
+require "./views/db-output.views.php";
 
 ?>
 

@@ -1,6 +1,6 @@
+if (window.location.search == '') {
 
-function onHome () {
-    window.location.href="?home";
+} else if (window.location.search == "?home") {
     document.getElementById("home").style.display = "block";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -17,9 +17,9 @@ function onHome () {
     document.getElementById("impressum").style.display = "none";
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
-}
 
-function onLeistungen () {
+} else if (window.location.search == "?leistungen") {
+
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "block";
     document.getElementById("bewerber").style.display = "none";
@@ -33,14 +33,11 @@ function onLeistungen () {
     document.getElementById("datenschutz").style.display = "none";
     document.getElementById("impressum").style.display = "none";
     document.getElementById("faqs").style.display = "none";
-    document.getElementById("datenschutz").style.display = "none";
     document.getElementById("impressum").style.display = "none";
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
 
-}
-
-function onBewerber () {
+} else if (window.location.search == "?bewerber") {
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "block";
@@ -58,9 +55,7 @@ function onBewerber () {
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
 
-}
-
-function onUnternehmer () {
+} else if (window.location.search == "?unternehmer") {
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -74,13 +69,12 @@ function onUnternehmer () {
     document.getElementById("datenschutz").style.display = "none";
     document.getElementById("impressum").style.display = "none";
     document.getElementById("faqs").style.display = "none";
-    document.getElementById("datenschutz").style.display = "none";
+    document.getElementById("datenschtz").style.display = "none";
     document.getElementById("impressum").style.display = "none";
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
-}
 
-function onJobboerse () {
+} else if (window.location.search == "?jobboerse") {
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -98,9 +92,7 @@ function onJobboerse () {
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
 
-}
-
-function onPartner () {
+} else if (window.location.search == "?partner") {
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -118,9 +110,7 @@ function onPartner () {
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
 
-}
-
-function onUeberLupo () {
+} else if (window.location.search == "?ueberLupo") {
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -138,9 +128,7 @@ function onUeberLupo () {
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
 
-}
-
-function onKontakt () {
+} else if (window.location.search == "?kontakt") {
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -158,9 +146,7 @@ function onKontakt () {
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
 
-}
-
-function onFlyer () {
+} else if (window.location.search == "?flyer") {
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -178,12 +164,7 @@ function onFlyer () {
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
 
-}
-
-/* footer-links */
-
-
-function onFaqs () {
+} else if (window.location.search == "?faqs") {
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -200,9 +181,7 @@ function onFaqs () {
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
 
-}
-
-function onDatenschutz () {
+} else if (window.location.search == "?datenschutz") {
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -220,10 +199,10 @@ function onDatenschutz () {
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
 
-}
 
 
-function onImpressum () {
+} else if (window.location.search == "?impressum") {
+    document.getElementById("impressum").style.display = "block";
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -235,16 +214,13 @@ function onImpressum () {
     document.getElementById("flyer").style.display = "none";
     document.getElementById("faqs").style.display = "none";
     document.getElementById("datenschutz").style.display = "none";
-    document.getElementById("impressum").style.display = "block";
     document.getElementById("faqs").style.display = "none";
     document.getElementById("datenschutz").style.display = "none";
     document.getElementById("agbs").style.display = "none";
     document.getElementById("stellenangebote").style.display = "none";
-}
 
 
-
-function onAgbs () {
+} else if (window.location.search == "?agbs") {
     document.getElementById("home").style.display = "none";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("bewerber").style.display = "none";
@@ -261,9 +237,9 @@ function onAgbs () {
     document.getElementById("impressum").style.display = "none";
     document.getElementById("agbs").style.display = "block";
     document.getElementById("stellenangebote").style.display = "none";
-}
 
-function onStellenangebote () {
+
+} else if (window.location.search == "?stellenangebote") {
     document.getElementById("stellenangebote").style.display = "block";
     document.getElementById("leistungen").style.display = "none";
     document.getElementById("home").style.display = "none";
@@ -278,7 +254,11 @@ function onStellenangebote () {
     document.getElementById("datenschutz").style.display = "none";
     document.getElementById("impressum").style.display = "none";
     document.getElementById("faqs").style.display = "none";
-    document.getElementById("datenschutz").style.display = "none";
+    document.getElementById("datenschtz").style.display = "none";
     document.getElementById("impressum").style.display = "none";
     document.getElementById("agbs").style.display = "none";
+}
+
+else {
+    console.log("error index")
 }

@@ -6,8 +6,8 @@
             <div class="col-12 col-xs-6 col-md-6 col-lg-4">
 
                 <div>
-                    <a href="../header/index.php"><img id="" src="./bilder/footer/imgFooterLogo.png"
-                                                       alt="logo konnte nicht geladen werden!"></a>
+                    <a href=""><img id="imgFooterLogo" src="./bilder/footer/imgFooterLogo.png"
+                                    alt="logo konnte nicht geladen werden!"></a>
                 </div>
 
 
@@ -45,7 +45,7 @@
 
                         <li>
 
-                            <button class="footer_button" id="button_home" onclick="onHome()">Home
+                            <button class="footer_button" id="button_home" onclick="onHome() ">Home
                             </button>
 
                         </li>
@@ -109,14 +109,19 @@
 
                     <div>
                                 <span class="border footer_span d-flex justify-content-center">
-                                <button class="button_forms" id="button_initivbewerbung"
-                                        onclick="onInitiativbewerbung()">Initiativbewerbung</button>
+                                <button class="button_forms" id="button_initivbewerbung">
+                                    <a style="display: block" id="initiativbewerbung"
+                                       href="./../../../lupo/layout/forms/initiativbewerbung/initiativbewerbung.php">Initiativbewerbung</a>
+                                </button>
                                 </span>
 
 
                         <span class="border footer_span d-flex justify-content-center">
-                                    <button class="button_forms" id="button_personalanfrage"
-                                            onclick="onPersonalanfrage()">Personalanfrage</button>
+                                    <button class="button_forms" id="button_personalanfrage">
+                                        <a id="personalanfrage"
+                                           href="./../../../lupo/layout/forms/personalanfrage/personalanfrageformular.php">Personalanfrage</a>
+
+                                    </button>
                         </span>
 
 
@@ -126,11 +131,17 @@
 
                     <p style="font-size: 14px;" class="margin-right_1em">Schreiben Sie uns eine
                         Mail an:
-                        <b><a class="hover-darkorange"
-                              href="../universal/flyer.php">info@personal.agentur-lupo.de</a></b>
+
+                        <button style="background: transparent; border: none; color: #c2cbd7; outline: none;"
+                                onclick="onFlyer()"><b class="hover-darkorange">info@personal.agentur-lupo.de</b>
+                        </button>
+
                         oder rufen Sie an unter:
-                        <b> <a class="hover-darkorange"
-                               href="../universal/flyer.php">+49&nbsp;176&nbsp;/&nbsp;72426019</a></b>
+
+                        <button style="background: transparent; border: none; color: #c2cbd7; outline:none;"
+                                onclick="onFlyer()"><b class="hover-darkorange">+49&nbsp;176&nbsp;/&nbsp;72426019</b>
+                        </button>
+
                     </p>
                 </div>
 
@@ -164,19 +175,23 @@
                                     </button>
                                 </li>
 
+
                                 <li>
+                                    <br class="none_max326px">
                                     <button class="black hover-white footer_link" id="button_faqs"
                                             onclick="onDatenschutz()">Datenschutz
                                     </button>
                                 </li>
 
                                 <li>
+                                    <br class="none_max326px">
                                     <button class="black hover-white footer_link" id="button_impressum"
                                             onclick="onImpressum()">Impressum
                                     </button>
                                 </li>
 
                                 <li>
+                                    <br class="none_max326px">
                                     <button class="black hover-white footer_link" id="button_agbs" onclick="onAgbs()">
                                         Agbs
                                     </button>
@@ -187,21 +202,21 @@
 
                         <div class="col-md-3 d-none d-md-block p-2 align-self-center">
                             <div class="center">
-                                <img class="footer_img" src="./bilder/footer/xing.png"
+                                <img class="footer_img imgXing" src="./bilder/footer/xing.png"
                                      alt="Bild konnte nicht geladen werden!">
-                                <img class="footer_img" src="./bilder/footer/linkedin.png"
+                                <img class="footer_img imgLinkedin" src="./bilder/footer/linkedin.png"
                                      alt="Bild konnte nicht geladen werden!">
-                                <img class="footer_img" src="./bilder/footer/facebook.png"
+                                <img class="footer_img imgFacebook" src="./bilder/footer/facebook.png"
                                      alt="Bild konnte nicht geladen werden!">
                             </div>
                         </div>
 
                         <div class="col-md-12 center d-md-none">
-                            <img class="footer_img" src="./bilder/footer/xing.png"
+                            <img id="imgXing1" class="footer_img imgXing" src="./bilder/footer/xing.png"
                                  alt="Bild konnte nicht geladen werden!">
-                            <img class="footer_img" src="./bilder/footer/linkedin.png"
+                            <img class="footer_img imgLinkedin" src="./bilder/footer/linkedin.png"
                                  alt="Bild konnte nicht geladen werden!">
-                            <img class="footer_img" src="./bilder/footer/facebook.png"
+                            <img class="footer_img imgFacebook" src="./bilder/footer/facebook.png"
                                  alt="Bild konnte nicht geladen werden!">
                             <br>
                             <br>

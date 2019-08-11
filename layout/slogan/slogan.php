@@ -1,4 +1,4 @@
-<section class="container-fluid bgHellGrey">
+<section id="slogan" class="container-fluid bgHellGrey">
     <div class="row">
         <div class="col-md-12">
             <div class="container">
@@ -37,8 +37,12 @@
                                 $db->close();
                             }
                         } ?>
+                        <?php // punkt entfernen!!!?>
+                        <h2 class="slogan"><?php echo $slogan . "." ; ?>
+                        <b>
 
-                        <h2 class="slogan"><?php echo $slogan; ?></h2>
+                        </b>
+                        </h2>
                     </div>
                 </div>
             </div>

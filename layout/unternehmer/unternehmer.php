@@ -18,18 +18,16 @@ $fUnternehmerT2 = NULL;
 $fUnternehmerT3 = NULL;
 $fUnternehmerT4 = NULL;
 
-
-include "./../../inc/db.inc.php";
 include "./views/db-output.views.php";
 
 ?>
 <div class="responsiveX">
 
-<script>
-    var headline = "Unternehmer";
-</script>
+    <script>
+        var headline = "Unternehmer";
+    </script>
 
-<?php include "./layout/header/headerHeadline.php"; ?>
+    <?php include "./layout/header/headerHeadline.php"; ?>
 
 
     <section class="container">
@@ -230,8 +228,8 @@ include "./views/db-output.views.php";
 
                     <div class="d-flex justify-content-center">
                         <button class="btn-warning center-block">
-
-                            <a class="white hover-white" href="<?php ?>">
+                            <a href="./layout/forms/personalanfrage/personalanfrageformular.php"
+                               class="white hover-white">
                                 <b>Personalanfrage</b>
                             </a>
                         </button>
@@ -256,15 +254,19 @@ include "./views/db-output.views.php";
                     bitte eine Mail an
 
                     <b>
-                        <a class="black hover-darkorange" href="">
-                            info@personal-agentur-lupo.de
-                        </a>
+                        <button onclick="onFlyer()"
+                                style="border: none; outline: none;"
+                                class="black hover-darkorange bg-white">
+                            <b> info@personal-agentur-lupo.de</b>
+                        </button>
                     </b>
                     oder rufen Sie uns unter der
                     <b>
-                        <a class="black hover-darkorange" href="<?php ?>">
-                            +4917672426019
-                        </a>
+                        <button onclick="onFlyer()"
+                                style="border: none; outline: none;"
+                                class="black hover-darkorange bg-white">
+                            <b>+4917672426019</b>
+                        </button>
                     </b>
                     an.
                 </p>

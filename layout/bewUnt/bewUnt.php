@@ -5,8 +5,6 @@
         <div class="row">
             <div class="col-md-12">
 
-                <br>
-
                 <div class="container bg_florawhite borderOrange bo50px">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6 ">
@@ -18,7 +16,7 @@
                                  alt="Bild wurde nicht geladen">
 
                             <ul class="argumente">
-                                <li><h3>Argumente für eine Bewerbung</h3></li>
+                                <li><h3 class="bewUntHeadline">Argumente für eine Bewerbung</h3></li>
                             </ul>
                             <ul class="list-style-none">
                                 <Li>Einkommenssicherheit unter vertraulichem Arbeitsklima.</li>
@@ -29,15 +27,14 @@
                             </ul>
 
                             <div class="d-flex justify-content-around">
-                                <button class="btn-warning center-block">
-                                    <a class="white hover-white" href="<?php ?>">
+                                <button onclick="onBewerber()"
+                                        class="btn-warning center-block white hover-white">
                                         <b>Bewerber</b>
-                                    </a>
                                 </button>
                             </div>
 
 
-                            <br>
+
 
                         </div>
 
@@ -51,7 +48,7 @@
 
 
                             <ul class="argumente">
-                                <li><h3>Argumente für eine Zusammenarbeit</h3></li>
+                                <li><h3 class="bewUntHeadline">Argumente für eine Zusammenarbeit</h3></li>
                             </ul>
                             <ul class="list-style-none">
                                 <li>Individuell auf Ihr Unternehmen abgestimmtes Fachpersonal. </li>
@@ -62,16 +59,22 @@
 
                             <div class="d-flex justify-content-around">
 
-                                <button class="btn-warning center-block">
-                                    <a class="white hover-white" href="<?php ; ?>">
+                                <button onclick="onUnternehmer()"
+                                        class="btn-warning center-block white hover-white">
                                         <b>Unternehmer</b>
-                                    </a>
+
                                 </button>
 
                             </div>
+
+                            <br>
                         </div>
                     </div>
                 </div>
+
+
+
+
 
             </div>
         </div>

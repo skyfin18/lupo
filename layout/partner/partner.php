@@ -14,7 +14,6 @@ $partnerH2 = Null;
 $partnerT1 = Null;
 $partnerT2 = Null;
 
-require "./inc/db.inc.php";
 require "./views/db-output.views.php";
 ?>
 
@@ -194,4 +193,4 @@ Bundesarbeitgerberverband                                </a>
     </section>
 
 </div>
-<?php include_once "./layout/slogan/slogan.php" ?>
+<?php include "./layout/slogan/slogan.php" ?>

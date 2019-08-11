@@ -10,3 +10,10 @@
     max-width: 97%;
     height:auto
 }
+
+@media (max-width: 400px) {
+    .bewUntHeadline {
+        margin-top: 0.4em;
+        font-size: 1.4rem;
+    }
+}

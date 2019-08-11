@@ -18,8 +18,6 @@ $ueberLupoT2 = null;
 $ueberLupoT3 = null;
 $ueberLupoT4 = null;
 
-
-require "./inc/db.inc.php";
 require "./views/db-output.views.php";
 
 ?>
@@ -253,6 +251,9 @@ require "./views/db-output.views.php";
         </div>
     </section>
 
-    <?php include_once "./layout/slogan/slogan.php" ?>
+    <?php include"./layout/slogan/slogan.php";
+    ?>
+
+
 
 </div>

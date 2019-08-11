@@ -30,7 +30,7 @@ a {
 }
 
 h2 {
-    font-size: 1.47rem;
+    font-size: 24px;
 }
 
 section {
@@ -45,7 +45,12 @@ section {
     width: 100%;
 }
  */
-
+/* none */
+@media (min-width: 326px) {
+    .none_max326px {
+        display: none;
+    }
+}
 
 /* ul */
 .list-style-none {
@@ -91,6 +96,10 @@ section {
 /* hover color */
 .hover-white:hover {
     color: white;
+}
+
+.hover-black:hover {
+    color: black;
 }
 
 .hover-darkorange:hover {
@@ -156,6 +165,51 @@ section {
 }
 
 /* bootstrap */
+.card {
+    border-radius: 20px;
+}
 
+.fixed-bottom {
+    width: 30px;
+    height: 30px;
+    border: solid 0px black;
+    border-radius: 50%;
+    margin-left: 84%;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+    .fixed-bottom {
+        margin-left: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px)  {
+    .fixed-bottom {
+        margin-left: 93%;
+        margin-bottom: 18px;
+    }
+}
+
+
+
+/* slogan max 400px */
+@media (max-width: 400px) {
+
+    #slogan b {
+        font-weight: 600;
+        font-size: 0.6em;
+    }
+
+    #slogan h2 {
+        line-height: 0.9;
+    }
+}
+
+.center {
+    text-align: center;
+}
 
 ​

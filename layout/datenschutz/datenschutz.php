@@ -32,14 +32,13 @@ $datenschutzT9 = null;
 $datenschutzT10 = null;
 $datenschutzT11 = null;
 
-include "./../../inc/db.inc.php";
-include "./views/db-output.views.php";
+require "./views/db-output.views.php";
 
 ?>
 
 
 
-<div class="overflowHidden">
+<div class="responsiveX">
 
     <script>
         var headline = "Datenschutz";

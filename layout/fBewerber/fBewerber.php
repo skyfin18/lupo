@@ -18,7 +18,6 @@ $fBewerberT3 = null;
 $fBewerberT4 = null;
 
 
-include "./../../inc/db.inc.php";
 include "./views/db-output.views.php";
 
 ?>
@@ -90,7 +89,6 @@ include "./views/db-output.views.php";
                         <div class="col-md-12 d-flex align-items-center">
 
 
-
                             <!-- Text 2 -->
                             <?php
                             if ($istBenutzerAngemeldet) {
@@ -104,8 +102,11 @@ include "./views/db-output.views.php";
                                 echo "</form>";
 
                             } ?>
-                            <p class="fontS20px"><?php echo $fBewerberT2; ?></p>
+                            <div style="margin: 15px 0 0 0;
+                                        line-height: 1.2" >
+                                <p id="bewSlogan"><?php echo $fBewerberT2; ?></p>
 
+                            </div>
 
                         </div>
                     </div>
@@ -203,15 +204,16 @@ include "./views/db-output.views.php";
 
 
                     <div class="d-flex justify-content-around">
-                        <button class="btn-warning center-block">
+                        <button onclick="onJobboerse()"
+                                class="btn-warning center-block white hover-white">
 
-                            <a class="white hover-white" href="">Jobbörse</a>
+                            Jobbörse
                         </button>
 
 
                         <button class="btn-warning center-block">
 
-                            <a class="white hover-white" href="">Initiativbewerbung</a>
+                            <a class="white hover-white" href="./layout/forms/initiativbewerbung/initiativbewerbung.php">Initiativbewerbung</a>
                         </button>
                     </div>
 
@@ -231,16 +233,21 @@ include "./views/db-output.views.php";
                     Wenn Sie mehr über uns erfahren möchten, schreiben Sie uns noch heute eine E-Mail an
 
 
-                    <a class="black hover-darkorange" href=""><b>info@personal-agentur-lupo.de</b>
-                    </a>
+                    <button onclick="onFlyer()"
+                            style="border: none; outline: none;"
+                            class="black hover-darkorange bg-white">
+                            <b>info@personal-agentur-lupo.de</b>
+                    </button>
 
 
                     oder rufen Sie uns einfach unter der mobilen Nummer
 
 
-                    <a class="black hover-darkorange" href="">
-                        <b>+4917672426019 </b>
-                    </a>
+                    <button onclick="onFlyer()"
+                            style="border: none; outline: none;"
+                            class="black hover-darkorange bg-white">
+                            <b>+4917672426019 </b>
+                    </button>
 
                     <br>
                     <br>

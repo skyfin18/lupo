@@ -1,8 +1,113 @@
 <?php session_start();
 
-include "./../../../inc/db.inc.php";
-include "./../views/db-output.views.php";
+require "./../../../inc/db.inc.php";
+require "./../../../views/db-output.views.php";
 ?>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><?php echo "ID-Bewerbung" ?></title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./../../../bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./../../../layout/header/header.css">
+
+    <link rel="stylesheet" href="./../../../layout/forms/bewerbungsformularMuster.css">
+
+    <link rel="stylesheet" href="./../../../layout/universal.css">
+
+
+    <link rel="stylesheet" href="./../../../layout/footer/footer.css">
+
+    <!-- java-script -->
+    <script src="./../../../layout/header/header.js"></script>
+
+    <script src="./../form.js"></script>
+
+    <!-- jquery-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- dropezone -->
+    <link rel="stylesheet" href="./../dropzone-master/dist/dropzone.css">
+    <script type="text/javascript" src="./../dropzone-master/dist/dropzone.js"></script>
+
+    <script>
+        // disable auto discover
+        Dropzone.autoDiscover = false;
+        // init dropzone on id (form or div)
+        $(document).ready(function () {
+            var myDropzone = new Dropzone("#myDropzone", {
+                url: "idBewerbung.php",
+                paramName: "file",
+                autoProcessQueue: false,
+                uploadMultiple: true, // uplaod files in a single request
+                parallelUploads: 100, // use it with uploadMultiple
+                maxFilesize: 10, // MB
+                maxFiles: 5,
+                acceptedFiles: ".jpg, .jpeg, .png, .gif, .pdf",
+                addRemoveLinks: true,
+                // Language Strings
+                dictFileTooBig: "File is to big ({{filesize}}mb). Max allowed file size is {{maxFilesize}}mb",
+                dictInvalidFileType: "Invalid File Type",
+                dictCancelUpload: "Cancel",
+                dictRemoveFile: "Remove",
+                dictMaxFilesExceeded: "Only {{maxFiles}} files are allowed",
+                dictDefaultMessage: "Drop files here to upload",
+            });
+        });
+        Dropzone.options.myDropzone = {
+            // The setting up of the dropzone
+            init: function () {
+                var myDropzone = this;
+                // First change the button to actually tell Dropzone to process the queue.
+                $("#dropzoneSubmit").on("click", function (e) {
+                    // Make sure that the form isn't actually being sent.
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    if (myDropzone.files != "") {
+                        myDropzone.processQueue();
+                    } else {
+                        $("#myDropzone").submit();
+                    }
+                });
+                // on add file
+                this.on("addedfile", function (file) {
+                    // console.log(file);
+                });
+                // on error
+                this.on("error", function (file, response) {
+                    // console.log(response);
+                });
+                // on start
+                this.on("sendingmultiple", function (file) {
+                    // console.log(file);
+                });
+                // on success
+                this.on("successmultiple", function (file) {
+                    // submit form
+                    $("#form").submit();
+                });
+            }
+        };
+    </script>
+</head>
+<body>
+
+
 <?php
 
 $jobid = $_SESSION["jobid"];
@@ -11,9 +116,10 @@ $jobid = $_SESSION["jobid"];
 
 // Weiterleitung - Nach dem absenden des Formulars,
 // gelangt der Benutzer über einen Link auf folgende Seite:
-$Weiterleitung = "../header/index.php";
+$Weiterleitung = "./../../../../lupo";
 
 // PHPMailer einbinden, Instanz und Zeichenkodierung setzen.
+require "./../PHPMailer-5.2-stable/PHPMailerAutoload.php";
 $Mailer = new PHPMailer();
 $Mailer->CharSet = "UTF-8";
 
@@ -37,26 +143,42 @@ $firstdate = isset($_POST["firstdate"]) ? strip_tags(trim($_POST["firstdate"])) 
 // Die Meldungen müssen eventuell angepasst werden.
 $Fehler = array("title" => "", "email" => "", "betreff" => "", "nachricht" => "",);
 if (isset($_POST["submit"])) {
-    $Fehler["title"] = strlen($_POST["title"]) < 2 ? " Bitte füllen Sie dieses Feld aus!" : "";
+    $Fehler["title"] = strlen($_POST["title"]) < 0 ? " Bitte füllen Sie dieses Feld aus!" : "";
     $Fehler["fname"] = strlen($_POST["fname"]) < 3 ? " Bitte füllen Sie dieses Feld aus!" : "";
     $Fehler["lname"] = strlen($_POST["lname"]) < 3 ? " Bitte füllen Sie dieses Feld aus!" : "";
-    $Fehler["tele"] = strlen($_POST["tele"]) < 3 ? " Bitte füllen Sie dieses Feld aus!" : "";
-    $Fehler["mobil"] = strlen($_POST["mobil"]) < 3 ? " Bitte füllen Sie dieses Feld aus!" : "";
+    $Fehler["tele"] = strlen($_POST["tele"]) < 0 ? " Bitte füllen Sie dieses Feld aus!" : "";
+    $Fehler["mobil"] = strlen($_POST["mobil"]) < 0 ? " Bitte füllen Sie dieses Feld aus!" : "";
     $Fehler["email"] = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) === false ? " Geben Sie eine gültige E-Mail-Adresse ein!" : "";
-    $Fehler["job"] = strlen($_POST["job"]) < 3 ? " Bitte füllen Sie dieses Feld aus!" : "";
-    $Fehler["bdate"] = strlen($_POST["bdate"]) < 3 ? " Bitte füllen Sie dieses Feld aus!" : "";
+    $Fehler["job"] = strlen($_POST["job"]) < 0 ? " Bitte füllen Sie dieses Feld aus!" : "";
+    $Fehler["bdate"] = strlen($_POST["bdate"]) < 0 ? " Bitte füllen Sie dieses Feld aus!" : "";
     $Fehler["upload"] = strlen($_POST["upload"]) < 0 ? " Bitte füllen Sie dieses Feld aus!" : "";
     $Fehler["kommi"] = strlen($_POST["kommi"]) < 0 ? " Bitte füllen Sie dieses Feld aus (min. 0 Zeichen)!" : "";
     $Fehler["firstdate"] = strlen($_POST["firstdate"]) < 0 ? " Bitte füllen Sie dieses Feld aus (min. 0 Zeichen)!" : "";
 }
+
+include "../../header/header.php";
 ?>
+
 <div class="responsiveX">
 
-    <script>
-        var headline = "ID-Bewerbung";
-    </script>
+    <script> var headline = "ID-Bewerbung"; </script>
 
-    <?php include "./layout/header/headerHeadline.php"; ?>
+    <section id="headerHeadline">
+        <div class="bgHellGrey ">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <img id="imgMuc" src="./../../../layout/header/imgMuc.jpg" alt="Bild konnte nicht geladen werden!">
+
+                    <h1 id="headline" class="text-center m-0">
+                        <script>document.write(headline)</script>
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="container">
         <div class="row">
@@ -73,7 +195,7 @@ if (isset($_POST["submit"])) {
                     $Formular = "
 <form id='form' action='idBewerbung.php' method='POST'>
 
-<img class='imglogo' src='./../bilder/logo/logoFormulare.jpg' alt='Bild wurde nicht geladen'>
+<img class='imglogo' src='./../../../bilder/forms/logoFormulare.jpg' alt='Bild wurde nicht geladen'>
 
 <h2 class=\"text-center\">Bewerbungsformular-ID</h2>
 <br>
@@ -99,7 +221,7 @@ if (isset($_POST["submit"])) {
     <label for=\"fname\">Vorname:</label>
     <span class='pflichtfeld'>&#10034; " . $Fehler["fname"] . "</span><br>
     <input class=\"form-control\" type='text' name='fname' value='" . $fname . "' placeholder=\"Vorname\" required='required'> 
-    <small class=''> Geben Sie hier Ihren Vornamen ein. </small>
+    <small class='form-text text-muted'> Geben Sie hier Ihren Vornamen ein. </small>
 </div>
 
 <!-- Nachname -->
@@ -113,8 +235,8 @@ if (isset($_POST["submit"])) {
 <!-- Telefonnummer -->
 <div class='form-group'>
  <label for=\"tele\">Telefonnummer:</label>
- <span class='pflichtfeld'>&#10034; " . $Fehler["tele"] . "</span><br>
- <input class='form-control' type='text' name='tele' value='" . $tele . "' placeholder=\"Telefonnummer\" required='required'> 
+ <span " . $Fehler["tele"] . "</span><br>
+ <input class='form-control' type='text' name='tele' value='" . $tele . "' placeholder=\"Telefonnummer\"> 
  <small class='form-text text-muted'> Geben Sie hier Ihre Telefonnummer ein. </small>
 </div>
 
@@ -141,22 +263,24 @@ if (isset($_POST["submit"])) {
 <div class='form-group'>
     <label for='id'>Bewerbung über ID</label>
     <span class='form-control'> $jobid </span>
+    <small class='form-text text-muted'> Stellenangebots-ID. </small>
 </div>
 
 
 <!-- Frühster Arbeitsbeginn -->
 <div class='form-group'>
  <label> Frühster Arbeitsbeginn:</label>
- <span class='pflichtfeld'>&#10034; " . $Fehler["bdate"] . "</span><br>
- <input class='form-control' type='bdate' name='bdate' value='" . $bdate . "' placeholder='z.B. Datum, Sofort ' required='required' >
+ <span " . $Fehler["bdate"] . "</span><br>
+ <input class='form-control' type='bdate' name='bdate' value='" . $bdate . "' placeholder='z.B. Datum, Sofort '>
  <small class='form-text text-muted'>Geben Sie hier Ihren frühster Arbeitsbeginn ein. </small>
 </div>
 
 <!-- Dropezone -->
 <div class='form-group'>
- <label> Anhänge Auswählen (Lebenslauf, Zeugnisse, Zusatzqualifikationen):</label>
+ <label> Anhänge Auswählen:</label>
  <span class='pflichtfeld'>&#10034;  " . $Fehler["upload"] . "</span><br>
-    <div id='myDropzone' class='dropzone form-control'></div>
+    <div id=\"myDropzone\" class=\"dropzone form-control\"></div>
+ <small class='form-text text-muted'>Anschreiben, Lebenslauf, Zeugnisse, Zusatzqualifikationen</small>
 </div>
 
 <!-- Nachricht: -->
@@ -164,15 +288,15 @@ if (isset($_POST["submit"])) {
  <label> Nachricht, Kommentar: </label>
  <span>" . $Fehler["kommi"] . "</span> <br>
  <textarea class='form-control' placeholder='Wünsche, Zusatz, Informationen, Hinweise' name='kommi' cols='40' rows='8' >" . $kommi . "</textarea>
- <span class='form-text text-muted'> Hier haben Sie Raum für Mitteilungen, Kommentare. </span>
+ <small class='form-text text-muted'> Hier haben Sie Raum für Mitteilungen, Kommentare. </small>
 </div>
 
 <!-- Bevorzugter Termin: -->
 <div class='form-group'>
  <label> Bevorzugter Termin für ein Vorstellungsgespräch:</label>
  <span> " . $Fehler["firstdate"] . "</span><br>
- <input class='form-control' type='bdate' name='firstdate' value='" . $firstdate . "' placeholder='z.B. Mittwoch' >
- <span class='form-text text-muted'> Geben Sie hier Ihren bevorzugten Termin für ein Vorstellungsgespräch ein. </span>
+ <input class='form-control' type='bdate' name='firstdate' value='" . $firstdate . "' placeholder='Datum / Nach Absprache' >
+ <small class='form-text text-muted'> Geben Sie hier Ihren bevorzugten Termin für ein Vorstellungsgespräch ein. </small>
 </div>
 
 <!-- checkbox -->
@@ -244,16 +368,15 @@ if (isset($_POST["submit"])) {
 
                             // E-Mail senden und überprüfen ob diese richtig versandt wurde.
                             if ($Mailer->Send()) {
-                                echo "<p class='text-center'><b>Vielen Dank <i>$title $lname</i>, Ihre Nachricht wurde versendet.</b></p>";
+                                echo "<p class='text-center'><b>Vielen Dank, Ihre Nachricht wurde versendet.</b><br>Mit freundlichen Grüßen Lupo. </p>";
                                 echo "  <div class=\"d-flex p-2\">
-                                            <img class='img-fluid mx-auto d-block' src='../bilder/logo/picmail.jpg' alt='Bild wurde nicht geladen'>
+                                            <img class='img-fluid mx-auto d-block' src='./../picmail.jpg' alt='Bild wurde nicht geladen'>
                                         </div>
                                         <div class='text-center'>
                                            
                                             <div id='div-weiter' class=\"d-flex justify-content-center\"><a id='a-weiter' class='black hover-darkorange' href='" . $Weiterleitung . "' target='_top'><b>Weiter</b></a></div>
                                          </div>
                                         ";
-                                include "./layout/slogan/slogan.php";
 
                             } else {
                                 echo "<p>Beim Senden der Nachricht ist ein Fehler aufgetreten!<br>" .
@@ -295,7 +418,7 @@ if (isset($_POST["submit"])) {
 
 
                         // daten in datenbank ändern
-                        include "./inc/db_connect.php";
+                        include "./../../../inc/db_connect.php";
 
                         // SQL-Befehl
                         $sql_befehl = "INSERT INTO `foInitiativbewerbung` (`id`, `title`, `fname`, `lname`, `tele`, `mobil`, `email`, `bdate`, `upload`, `kommi`, `firstdate`, `jobid`) VALUES (NULL, '$title', '$fname', '$lname', '$tele', '$mobil', '$email', '$bdate', '', '$kommi', '$firstdate', '$jobid');";
@@ -319,9 +442,39 @@ if (isset($_POST["submit"])) {
         </div>
     </div>
 
+    <?php
+    include "./../../slogan/slogan.php";
+
+    ?>
 
 </div>
 
+<?php
+include_once "../../../layout/footer/footer.php";
+?>
 
+<!-- java Script important! -->
 
+<script>
+    document.getElementById ('initiativbewerbung'). href = './../initiativbewerbung/initiativbewerbung.php';
+    document.getElementById ('personalanfrage'). href = './../personalanfrage/personalanfrageformular.php';
+</script>
 
+<script src="./../form.js"></script>
+
+<script>document.getElementById("imgFooterLogo").src = "./../../../bilder/footer/imgFooterLogo.png"; </script>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

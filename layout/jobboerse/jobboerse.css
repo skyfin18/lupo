@@ -79,6 +79,12 @@
     }
 }
 
+#jobs_div_etwas_spannendes_dabei {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+}
+
 .bg_grey {
     background-color: rgba(131,131,131,0.36);
 }
@@ -129,6 +135,27 @@
 @media (max-width: 355px) {
     #jobs_bewerbungsportal_border {
         height: 510px;
+    }
+}
+
+@media (max-width: 767px) {
+    #jobs_bewerbungsportal_border {
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+}
+
+@media (min-width: 768px){
+    #jobs_bewerbungsportal_border {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    #jobs_div_etwas_spannendes_dabei {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 50px;
     }
 }
 

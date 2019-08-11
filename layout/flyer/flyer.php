@@ -76,4 +76,7 @@
     </div>
 </section>
 
-<br>
+<?php
+    echo "<br>";
+    include "./layout/slogan/slogan.php";
+?>

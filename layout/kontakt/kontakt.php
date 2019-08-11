@@ -156,4 +156,4 @@ require "./views/db-output.views.php";
     </div>
 </section>
 
-<?php include_once "./layout/slogan/slogan.php" ?>
+<?php include "./layout/slogan/slogan.php" ?>

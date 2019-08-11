@@ -100,6 +100,7 @@ footer p {
 .copyright {
     font-size: 15px;
     margin-bottom: 2px;
+    text-align: center;
 }
 
 /* footer link */
@@ -136,7 +137,13 @@ footer p {
     border: none;
     outline: none;
     background-color: #15191f;
-    color: #c2cbd7;>
+    color: #c2cbd7;
+}
+
+@media  (max-width: 380px) {
+    .button_forms {
+        font-size: 0.8em;
+    }
 }
 
 .button_forms:hover,

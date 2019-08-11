@@ -21,7 +21,6 @@ $leistungenT3 = NULL;
 $leistungenT4 = NULL;
 
 
-include "./../../inc/db.inc.php";
 include "./views/db-output.views.php";
 
 ?>
@@ -264,13 +263,19 @@ include "./views/db-output.views.php";
                             <p>
                                 Gerne vereinbaren wir einen Termin zum persönlichen Gespräch. schreiben Sie uns doch
                                 einfach eine Mail an:
-                                <a class="black hover-darkorange" href="./layout/flyer/flyer.php">
-                                    <br>
+                                <button onclick="onFlyer()"
+                                        style="border: none; outline: none;"
+                                        class="black hover-darkorange bgHellGrey" >
                                     <b>info@personal-agentur-lupo.de</b>
-                                </a>
+                                </button>
+
                                 oder rufen Sie uns mobil unter der
-                                <a class="black hover-darkorange"
-                                   href="./layout/flyer/flyer.php"><b>+4917672426019</b></a> an.
+
+                                <button onclick="onFlyer()"
+                                        style="border: none; outline: none;"
+                                        class="black hover-darkorange bgHellGrey" >
+                                    <b>+4917672426019</b>
+                                </button>
                             </p>
 
 
@@ -283,6 +288,8 @@ include "./views/db-output.views.php";
 
     </div>
 </section>
+
+<br>
 
 <?php
 include "layout/bewUnt/bewUnt.php";
